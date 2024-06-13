@@ -11,6 +11,10 @@ env:
   ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
   ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
+  a1: "${{ secrets.ALIYUN_REGISTRY }}"
+  a2: "${{ secrets.ALIYUN_NAME_SPACE }}"
+  a3: "${{ secrets.ALIYUN_REGISTRY_USER }}"
+  a4: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
 
 jobs:
 
@@ -26,9 +30,9 @@ jobs:
 
     - name: Build and push image Aliyun
       run: |
-        echo "user:$ALIYUN_REGISTRY_USER"
-        echo "password:$ALIYUN_REGISTRY_PASSWORD"
-        echo "registry:$ALIYUN_REGISTRY"
+        echo "user:$a1"
+        echo "password:$a3"
+        echo "registry:$a4"
         docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
         # 数据预处理,判断镜像是否重名
         declare -A duplicate_images
