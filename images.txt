@@ -1,2 +1,3 @@
 nginx
 elasticsearch:8.12.2
+ghcr.io/immich-app/immich-server
