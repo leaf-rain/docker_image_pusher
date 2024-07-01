@@ -2,3 +2,4 @@ nginx
 seafileltd/seafile-mc:11.0-latest
 ypptec/nascab:latest
 hectorqin/reader:latest
+containrrr/watchtower:latest
